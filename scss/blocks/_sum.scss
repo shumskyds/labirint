@@ -1,0 +1,13 @@
+.sum {
+    padding: 40px;
+    border-left: 1px solid #BEBEBE;
+    &__container {
+        min-width: 320px;
+    }
+    &__title {
+        @include subtitle-general;
+    }
+    &__weight {
+        font-weight: 400;
+    }
+}

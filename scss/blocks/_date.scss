@@ -1,0 +1,19 @@
+.date {
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &__cards-wrapper {
+        display: flex;
+        gap: 14px;
+    }
+    &__check:checked + .date-card {
+        @include card-outline;
+    }
+    &__link {
+        @include text-regular;
+        color: $link-color;
+        text-decoration: none;
+    }
+}

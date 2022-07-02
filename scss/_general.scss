@@ -1,0 +1,21 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.html {
+    height: 100%;
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    align-content: start;
+    background-color: $main-bg;
+}
+
+label:has([type="radio"]:checked) {
+    outline: 3px solid red;
+}

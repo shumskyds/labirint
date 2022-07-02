@@ -1,0 +1,21 @@
+.customer {
+    border: none;
+    &__container {
+        display: flex;
+        gap: 14px;
+    }
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    &__title {
+        @include subtitle-general;
+        margin-bottom: 14px;
+    }
+    &__link {
+        @include text-regular;
+        color: $link-color;
+        text-decoration: none;
+    }
+}

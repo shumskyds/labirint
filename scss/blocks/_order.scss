@@ -1,0 +1,19 @@
+.order {
+    &__container {
+        max-width: 1740px;
+        margin: 0 auto;
+    }
+    &__windows-wrapper {
+        display: flex;
+        background-color: $light-bg;
+        border: 1px solid #C5C5C5;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom: 1px solid $border-color;
+    }
+    &__title {
+        @include title-general;
+        padding: 0 70px;
+        margin-bottom: 20px;
+    }
+}

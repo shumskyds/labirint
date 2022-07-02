@@ -1,0 +1,17 @@
+.date-card {
+    @include card-border;
+    padding: 20px;
+    cursor: pointer;
+    &__day {
+        @include text-regular;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__time {
+        @include text-regular;
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: 0.13px;
+    }
+}

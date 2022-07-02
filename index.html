@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Оформление заказа</title>
+</head>
+<body class="page">
+        <div class="order order__container">
+            <h1 class="order__title">Оформление заказа</h1>
+            
+            <div class="order__windows-wrapper">
+                <form class="order__form order-form" action="#" id="order-form">
+
+                    <fieldset class="order-form__address address">
+                        <div class="address__top-wrapper">
+                            <h2 class="address__title">Доставка</h2>
+                            <div class="address__controls-wrapper">
+                                <button class="address__control address__control_to-left address__control_disabled" type="button" aria-label="Следующий адрес доставки"></button>
+                                <button class="address__control address__control_to-right" type="button" aria-label="Предыдущий адрес доставки"></button>
+                            </div>
+                        </div>
+                        <div class="address__cards-wrapper">
+                            <input class="address__check" id="address-1" type="radio" name="address-card" value="Почта России" checked hidden>
+                            <label for="address-1" class="address__card address-card">
+                                <div class="address-card__text-wrapper">
+                                    <p class="address-card__delivery-method">Почта России, курьер — 24-26 сент.</p>
+                                    <p class="address-card__destination">ул. Академика Королева, 73/3, Петропавловск-Камчатский, 683000</p>
+                                </div>
+                                <div class="address-card__cost">+367 <span class="address-card__currency">&#8381;</span></div>
+                            </label>
+                            <input class="address__check" id="address-2" type="radio" name="address-card" value="Курьер Лабиринта" hidden>
+                            <label for="address-2" class="address__card address-card">
+                                <div class="address-card__text-wrapper">
+                                    <p class="address-card__delivery-method">Лабиринт, курьер — 25 сент.</p>
+                                    <p class="address-card__destination">Можайское шоссе, д. 21, кв. 50, Москва, 121471</p>
+                                </div>
+                                <div class="address-card__cost">0 <span class="address-card__currency">&#8381;</span></div>
+                            </label>
+                        </div>
+                        <a href="#" class="address__link">Выбрать новое место и способ</a>
+                    </fieldset>
+    
+                    <fieldset class="order-form__date date">
+                        <div class="date__cards-wrapper">
+                            <input id="date-1" class="date__check" type="radio" name="date-card" value="24-26.09, 10:00-19:00" hidden>
+                            <label for="date-1" class="date__card date-card">
+                                <p class="date-card__day">пн, 24 сен — ср, 26 сен</p>
+                                <p class="date-card__time">10:00–19:00</p>
+                            </label>
+                            <input id="date-2" class="date__check" type="radio" name="date-card" value="27-28.09, 10:00-19:00" hidden>
+                            <label for="date-2" class="date__card date-card">
+                                <p class="date-card__day">чт, 27 сен — пт, 28 сен</p>
+                                <p class="date-card__time">10:00–19:00</p>
+                            </label>
+                        </div>
+                        <div class="date__link-wrapper">
+                            <a href="#" class="date__link">Другие дата и время</a>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset class="order-form__options options">
+                        <input class="options__check" id="option-1" type="checkbox" hidden><label for="option-1" class="options__descr">Viber/СМС уведомления о статусе заказа</label>
+                        <input class="options__check options__check_disabled" id="option-2" type="checkbox" checked hidden><label for="option-2" class="options__descr">Оставить у двери (бесконтактная доставка)</label>
+                    </fieldset>
+    
+                    <fieldset class="order-form__customer customer">
+                        <legend class="customer__title">Получатель</legend>
+                        <div class="customer__container">
+                            <div class="customer__content-wrapper">
+                                <div class="customer__select-wrapper">
+                                    <select name="select-name" form="order-form">
+                                        <optgroup label="Имя и фамилия">
+                                            <option value="Вольфганг Вениаминович Константинопольский" selected>Вольфганг Вениаминович Константинопольский</option>
+                                            <option value="Александр Сергеевич Пушкин">Александр Сергеевич Пушкин</option>
+                                            <option value="Кондрат Конфедератович Колотушкин">Кондрат Конфедератович Колотушкин</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <a class="customer__link" href="#">Новый Получатель</a>
+                            </div>
+                            <div class="customer__content-wrapper">
+                                <div class="customer__select-wrapper">
+                                    <select name="select-tel" form="order-form">
+                                        <optgroup label="Контактный телефон">
+                                            <option value="89102345678" selected>+7 910 234-56-78</option>
+                                            <option value="89112355779">+7 911 235-57-79</option>
+                                            <option value="79122365880">+7 912 236-58-80</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <a class="customer__link" href="#">Новый телефон</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+        
+                <div class="order__sum sum">
+                    <div class="sum__container">
+                        <h2 class="sum__title">В заказе 4 товара <span class="sum__weight">(2 кг)</span></h2>
+                        <table class="sum__table sum-table">
+                            <tr>
+                                <td class="sum-table__descr">Цена товаров</td>
+                                <td class="sum-table__value">29 456 <span class="sum-table__currency">&#8381;</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sum-table__descr">Все скидки</td>
+                                <td class="sum-table__value">-7 732 <span class="sum-table__currency">&#8381;</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sum-table__descr">Скидка за предоплату</td>
+                                <td class="sum-table__value">-3%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total">
+            <button class="total__button" type="submit">Оформить и оплатить</button>
+            <div class="total__table-wrapper">
+                <div class="total__table">
+                    <p class="total__descr">Итого к оплате на сайте:</p>
+                    <div class="total__sum">21 072 <span class="total__currency">&#8381;</span></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

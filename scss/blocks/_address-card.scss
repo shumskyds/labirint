@@ -1,0 +1,27 @@
+.address-card {
+    @include card-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 490px;
+    padding: 20px;
+    cursor: pointer;
+    &__text-wrapper {
+        max-width: 360px;
+    }
+    &__delivery-method {
+        @include text-regular;
+        font-weight: 700;
+        margin: 0;
+    }
+    &__destination {
+        @include text-regular;
+        margin: 0;
+    }
+    &__cost {
+        @include text-regular;
+        text-align: right;
+        min-width: 70px;
+    }
+}

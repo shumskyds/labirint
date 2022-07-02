@@ -1,0 +1,13 @@
+.sum-table {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+
+    &__descr {
+        @include text-regular;
+    }
+    &__value {
+        @include text-regular;
+        font-weight: 700;
+        text-align: right;
+    }
+}

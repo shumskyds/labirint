@@ -1,0 +1,47 @@
+.address {
+    padding: 0;
+    border: none;
+    &__top-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 17px;
+    }
+    &__control {
+        @include card-border;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+        &_to-left {
+            background-image: url('../icons/arrow-to-left.svg');
+        }
+        &_to-right {
+            background-image: url('../icons/arrow-to-right.svg');
+        }
+        &_disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    }
+    &__cards-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+    &__check:checked + .address-card {
+        @include card-outline;
+    }
+    &__title {
+        @include subtitle-general;
+        margin-bottom: 0;
+    }
+    &__link {
+        @include text-regular;
+        color: $link-color;
+        text-decoration: none;
+    }
+}

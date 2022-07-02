@@ -1,0 +1,38 @@
+.options {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: none;
+    &__descr {
+        @include text-regular;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 34px;
+        margin-right: auto;
+        cursor: pointer;
+        &:before {
+            @include card-border;
+            content: '';
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__check {
+        &:checked + :before {
+            border: 1px solid transparent;
+            background-image: url(../icons/checked.svg);
+            background-position: center center;
+        }
+        &_disabled + :before {
+            opacity: 0.2;
+        }
+        &_disabled + .options__descr {
+            pointer-events: none;
+        }
+    }
+}

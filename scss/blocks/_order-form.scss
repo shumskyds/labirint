@@ -1,0 +1,15 @@
+.order-form {
+    padding: 40px;
+    border-right: 1px solid #BEBEBE;
+    &__address {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    &__date {
+        margin: 0;
+        margin-bottom: 14px;
+    }
+    &__options {
+        margin-bottom: 30px;
+    }
+}
