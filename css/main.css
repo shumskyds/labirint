@@ -197,8 +197,9 @@ label:has([type=radio]:checked) {
 }
 @media (max-width: 700px) {
   .address__cards-wrapper {
-    max-width: 80vw;
+    max-width: 100vw;
     overflow: scroll;
+    padding-right: 16px;
   }
 }
 .address__check:checked + .address-card {

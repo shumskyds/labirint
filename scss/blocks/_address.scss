@@ -47,8 +47,9 @@
             flex-wrap: nowrap;
         }
         @include small {
-            max-width: 80vw;
+            max-width: 100vw;
             overflow: scroll;
+            padding-right: 16px;
         }
     }
     &__check:checked + .address-card {
