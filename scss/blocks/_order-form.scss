@@ -12,6 +12,7 @@
     }
     @include medium {
         padding-left: 20px;
+        border-right: none;
     }
     @include small {
         padding: 24px 0 32px 0;

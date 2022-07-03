@@ -108,6 +108,7 @@ label:has([type=radio]:checked) {
 @media (max-width: 992px) {
   .order-form {
     padding-left: 20px;
+    border-right: none;
   }
 }
 @media (max-width: 700px) {
@@ -716,13 +717,12 @@ label:has([type=radio]:checked) {
   .customer__link_name {
     position: absolute;
     top: -35px;
-    right: 0;
+    right: 16px;
   }
 }
 
 .sum {
   padding: 40px;
-  border-left: 1px solid #BEBEBE;
 }
 @media (max-width: 1600px) {
   .sum {
