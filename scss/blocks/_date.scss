@@ -9,6 +9,10 @@
         align-items: start;
         gap: 14px;
     }
+    @include small {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     &__cards-wrapper {
         display: flex;
         gap: 14px;

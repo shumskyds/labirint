@@ -1,6 +1,10 @@
 .customer {
     padding: 0;
     border: none;
+    @include small {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     &__container {
         display: flex;
         gap: 14px;

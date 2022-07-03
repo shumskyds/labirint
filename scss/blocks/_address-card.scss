@@ -54,9 +54,13 @@
             text-align-last: left;
             display: none;
             @include small {
-                display: block;
+                display: flex;
+                justify-content: start;
             }
         }
+    }
+    &__currency {
+        margin-left: 5px;
     }
 
 }
