@@ -18,6 +18,7 @@
     @include small {
         align-items: start;
         min-width: 300px;
+        padding: 0;
     }
     &__text-wrapper {
         max-width: 360px;

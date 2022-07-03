@@ -275,6 +275,7 @@ label:has([type=radio]:checked) {
   .address-card {
     align-items: start;
     min-width: 300px;
+    padding: 0;
   }
 }
 .address-card__text-wrapper {
