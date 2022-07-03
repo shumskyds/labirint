@@ -27,6 +27,7 @@
                             <label for="address-1" class="address__card address-card">
                                 <div class="address-card__text-wrapper">
                                     <p class="address-card__delivery-method">Почта России, курьер — 24-26 сент.</p>
+                                    <div class="address-card__cost address-card__cost_mobile">+367 <span class="address-card__currency">&#8381;</span></div>
                                     <p class="address-card__destination">ул. Академика Королева, 73/3, Петропавловск-Камчатский, 683000</p>
                                 </div>
                                 <div class="address-card__cost">+367 <span class="address-card__currency">&#8381;</span></div>
@@ -35,6 +36,7 @@
                             <label for="address-2" class="address__card address-card">
                                 <div class="address-card__text-wrapper">
                                     <p class="address-card__delivery-method">Лабиринт, курьер — 25 сент.</p>
+                                    <div class="address-card__cost address-card__cost_mobile">0 <span class="address-card__currency">&#8381;</span></div>
                                     <p class="address-card__destination">Можайское шоссе, д. 21, кв. 50, Москва, 121471</p>
                                 </div>
                                 <div class="address-card__cost">0 <span class="address-card__currency">&#8381;</span></div>
@@ -62,42 +64,38 @@
                     </fieldset>
     
                     <fieldset class="order-form__options options">
-                        <input class="options__check" id="option-1" type="checkbox" hidden><label for="option-1" class="options__descr">Viber/СМС уведомления о статусе заказа</label>
+                        <input class="options__check" id="option-1" type="checkbox" hidden checked><label for="option-1" class="options__descr">Viber/СМС уведомления о статусе заказа</label>
                         <input class="options__check options__check_disabled" id="option-2" type="checkbox" checked hidden><label for="option-2" class="options__descr">Оставить у двери (бесконтактная доставка)</label>
                     </fieldset>
     
                     <fieldset class="order-form__customer customer">
                         <legend class="customer__title">Получатель</legend>
                         <div class="customer__container">
-                            <div class="customer__content-wrapper">
-                                <div class="customer__select-wrapper">
-                                    <select name="select-name" form="order-form">
-                                        <optgroup label="Имя и фамилия">
-                                            <option value="Вольфганг Вениаминович Константинопольский" selected>Вольфганг Вениаминович Константинопольский</option>
-                                            <option value="Александр Сергеевич Пушкин">Александр Сергеевич Пушкин</option>
-                                            <option value="Кондрат Конфедератович Колотушкин">Кондрат Конфедератович Колотушкин</option>
-                                        </optgroup>
+                            <div class="customer__content-wrapper customer__content-wrapper_name">
+                                <div class="customer__select-wrapper customer__select-wrapper_name">
+                                    <select class="customer__select customer__select_name" name="select-name" form="order-form">
+                                        <option value="Вольфганг Вениаминович Константинопольский" selected>Вольфганг Вениаминович Константинопольский</option>
+                                        <option value="Александр Сергеевич Пушкин">Александр Сергеевич Пушкин</option>
+                                        <option value="Кондрат Конфедератович Колотушкин">Кондрат Конфедератович Колотушкин</option>
                                     </select>
                                 </div>
-                                <a class="customer__link" href="#">Новый Получатель</a>
+                                <a class="customer__link customer__link_name" href="#">Новый получатель</a>
                             </div>
-                            <div class="customer__content-wrapper">
-                                <div class="customer__select-wrapper">
-                                    <select name="select-tel" form="order-form">
-                                        <optgroup label="Контактный телефон">
-                                            <option value="89102345678" selected>+7 910 234-56-78</option>
-                                            <option value="89112355779">+7 911 235-57-79</option>
-                                            <option value="79122365880">+7 912 236-58-80</option>
-                                        </optgroup>
+                            <div class="customer__content-wrapper customer__content-wrapper_tel">
+                                <div class="customer__select-wrapper customer__select-wrapper_tel">
+                                    <select class="customer__select customer__select_tel" name="select-tel" form="order-form">
+                                        <option value="89102345678" selected>+7 910 234-56-78</option>
+                                        <option value="89112355779">+7 911 235-57-79</option>
+                                        <option value="79122365880">+7 912 236-58-80</option>
                                     </select>
                                 </div>
-                                <a class="customer__link" href="#">Новый телефон</a>
+                                <a class="customer__link customer__link_tel" href="#">Новый телефон</a>
                             </div>
                         </div>
                     </fieldset>
                 </form>
         
-                <div class="order__sum sum">
+                <div class="order__sum sum" id="popup-window">
                     <div class="sum__container">
                         <h2 class="sum__title">В заказе 4 товара <span class="sum__weight">(2 кг)</span></h2>
                         <table class="sum__table sum-table">
@@ -114,6 +112,13 @@
                                 <td class="sum-table__value">-3%</td>
                             </tr>
                         </table>
+                        <div class="sum__payment">
+                            <div class="sum-table__descr sum-table__descr_payment">К оплате:</div>
+                            <div class="sum-table__value">21 072 <span class="sum-table__currency">&#8381;</span></div>
+                        </div>
+                    </div>
+                    <div class="sum__popup-close-wrapper">
+                        <a class="sum__popup-close" href="#popup-open">Закрыть подробности</a>
                     </div>
                 </div>
             </div>
@@ -124,9 +129,13 @@
             <div class="total__table-wrapper">
                 <div class="total__table">
                     <p class="total__descr">Итого к оплате на сайте:</p>
+                    <p class="total__descr total__descr_mobile">К оплате:</p>
                     <div class="total__sum">21 072 <span class="total__currency">&#8381;</span></div>
+                    <a href="#popup-window" class="total__details" id="popup-open">Подробнее</a>
                 </div>
             </div>
         </div>
+
+    <script src="js/popup.js"></script>
 </body>
 </html>

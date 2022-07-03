@@ -7,12 +7,36 @@
     max-width: 490px;
     padding: 20px;
     cursor: pointer;
+    @include large {
+        max-width: none;
+        width: 100%;
+        gap: 0;
+    }
+    @include medium {
+        width: 50%;
+    }
+    @include small {
+        align-items: start;
+        min-width: 300px;
+    }
     &__text-wrapper {
         max-width: 360px;
+        @include extra-large {
+            max-width: 300px;
+        }
+        @include large {
+            max-width: none;
+        }
+        @include small {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
     }
     &__delivery-method {
         @include text-regular;
         font-weight: 700;
+        font-size: 21px;
         margin: 0;
     }
     &__destination {
@@ -23,5 +47,16 @@
         @include text-regular;
         text-align: right;
         min-width: 70px;
+        @include small {
+            display: none;
+        }
+        &_mobile {
+            text-align-last: left;
+            display: none;
+            @include small {
+                display: block;
+            }
+        }
     }
+
 }

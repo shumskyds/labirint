@@ -5,6 +5,9 @@
     font-size: 35px;
     line-height: 44px;
     margin-top: 0;
+    @include medium {
+        font-size: 27px;
+    }
 }
 
 @mixin subtitle-general {
@@ -14,6 +17,9 @@
     font-size: 29px;
     line-height: 37px;
     margin-top: 0;
+    @include medium {
+        font-size: 21px;
+    }
 }
 
 @mixin text-regular {
@@ -22,6 +28,13 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 28px;
+    @include medium {
+        font-size: 17px;
+    }
+    @include small {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
 
 @mixin card-border {
@@ -31,4 +44,30 @@
 
 @mixin card-outline {
     border: 1px solid $link-color;
+}
+
+/* === Media === */
+
+@mixin extra-large {
+    @media (max-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: 700px) {
+        @content;
+    }
 }

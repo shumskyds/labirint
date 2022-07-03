@@ -19,3 +19,8 @@
 label:has([type="radio"]:checked) {
     outline: 3px solid red;
 }
+
+#popup-window:target {
+    opacity: 1;
+    visibility: visible;
+}

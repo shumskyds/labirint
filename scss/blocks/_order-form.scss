@@ -1,9 +1,27 @@
 .order-form {
     padding: 40px;
+    padding-right: 80px;
     border-right: 1px solid #BEBEBE;
+    @include extra-large {
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+    @include large {
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    @include medium {
+        padding-left: 20px;
+    }
+    @include small {
+        padding: 24px 16px 32px 16px;
+    }
     &__address {
         margin: 0;
         margin-bottom: 30px;
+        @include large {
+            margin-bottom: 14px;
+        }
     }
     &__date {
         margin: 0;
@@ -11,5 +29,10 @@
     }
     &__options {
         margin-bottom: 30px;
+    }
+    &__customer {
+        @include small {
+            position: relative;
+        }
     }
 }

@@ -6,6 +6,18 @@
     align-items: center;
     min-height: 120px;
     background-color: $footer-bg;
+    @include large {
+        padding: 0 60px;
+    }
+    @include medium {
+        padding: 0 20px;
+    }
+    @include small {
+        flex-direction: column;
+        align-items: start;
+        padding: 16px;
+        gap: 16px;
+    }
     &__button {
         @include subtitle-general;
         color: $text-color-light;
@@ -19,16 +31,72 @@
         &:hover {
             box-shadow: none;
         }
+        @include medium {
+            padding: 15px 35px;
+        }
+        @include small {
+            order: 1;
+            width: 100%;
+        }
     }
     &__table {
         display: flex;
         align-items: center;
+        @include medium {
+            flex-direction: column;
+            align-items: end;
+        }
+        @include small {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__table-wrapper {
+        @include small {
+            width: 100%;
+        }
     }
     &__descr {
         @include text-regular;
         margin-right: 112px;
+        @include large {
+            margin-right: 50px;
+        }
+        @include medium {
+            margin: 0;
+            margin-right: 0;
+        }
+        @include small {
+            display: none;
+        }
+        &_mobile {
+            display: none;
+            @include small {
+                display: block;
+                margin-right: 6px;
+                font-weight: 700;
+            }
+        }
     }
     &__sum {
         @include title-general;
+        @include small {
+            @include text-regular;
+            font-weight: 700;
+        }
+    }
+    &__details {
+        display: none;
+        @include small {
+            display: block;
+            margin-left: auto;
+            text-decoration: none;
+            color: $link-color;
+            font-family: $font-general;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            cursor: pointer;
+        }
     }
 }

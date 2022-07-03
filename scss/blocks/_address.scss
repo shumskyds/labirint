@@ -7,6 +7,11 @@
         align-items: center;
         margin-bottom: 17px;
     }
+    &__controls-wrapper {
+        @include small {
+            display: none;
+        }
+    }
     &__control {
         @include card-border;
         background-color: transparent;
@@ -31,6 +36,17 @@
         justify-content: space-between;
         gap: 14px;
         margin-bottom: 14px;
+        @include large {
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+        @include medium {
+            flex-wrap: nowrap;
+        }
+        @include small {
+            max-width: 90vw;
+            overflow: hidden;
+        }
     }
     &__check:checked + .address-card {
         @include card-outline;
@@ -43,5 +59,8 @@
         @include text-regular;
         color: $link-color;
         text-decoration: none;
+        @include small {
+            font-size: 17px;
+        }
     }
 }

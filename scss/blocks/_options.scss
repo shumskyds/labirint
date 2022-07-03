@@ -12,6 +12,9 @@
         padding-left: 34px;
         margin-right: auto;
         cursor: pointer;
+        @include small {
+            font-size: 17px;
+        }
         &:before {
             @include card-border;
             content: '';

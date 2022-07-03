@@ -1,21 +1,117 @@
 .customer {
+    padding: 0;
     border: none;
     &__container {
         display: flex;
         gap: 14px;
+        @include large {
+            flex-wrap: wrap;
+        }
     }
     &__content-wrapper {
         display: flex;
         flex-direction: column;
         gap: 14px;
+        @include large {
+            width: 100%;
+        }
+        &_tel {
+            @include small {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
     }
     &__title {
         @include subtitle-general;
         margin-bottom: 14px;
+        @include small {
+            margin-bottom: 8px;
+        }
+    }
+    &__select {
+        @include card-border;
+        @include text-regular;
+        font-weight: 700;
+        height: 74px;
+        appearance: none;
+        padding: 26px 58px 5px 14px;
+        cursor: pointer;
+        @include large {
+            padding: 26px 40px 5px 10px;
+            width: 100%;
+        }
+        @include small {
+            height: 69px;
+            padding: 34px 40px 15px 13px;
+            min-width: 210px;
+            font-size: 17px;
+        }
+    }
+    &__select-wrapper {
+        position: relative;
+        &_name {
+            &::before {
+                position: absolute;
+                top: 8px;
+                left: 14px;
+                content: 'Имя и фамилия';
+                font-family: $font-general;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 21px;
+                color: #6E6E73;
+                color: #6E6E73;
+                @include small {
+                    font-size: 14px;
+                }
+            }
+        }
+        &_tel {
+            &::before {
+                position: absolute;
+                top: 8px;
+                left: 14px;
+                content: 'Контактный телефон';
+                font-family: $font-general;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 21px;
+                color: #6E6E73;
+                @include small {
+                    font-size: 14px;
+                }
+            }
+        }
+        &::after {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url('../icons/drop-down.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            pointer-events: none;
+        }
     }
     &__link {
         @include text-regular;
         color: $link-color;
         text-decoration: none;
+        @include small {
+            font-size: 17px;
+            line-height: 21px;
+        }
+        &_name {
+            @include small {
+                position: absolute;
+                top: -35px;
+                right: 0;
+            }
+        }
     }
 }

@@ -10,10 +10,19 @@
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         border-bottom: 1px solid $border-color;
+        @include medium {
+            flex-direction: column;
+        }
     }
     &__title {
         @include title-general;
         padding: 0 70px;
         margin-bottom: 20px;
+        @include medium {
+            padding: 0 20px;
+        }
+        @include small {
+            margin-bottom: 16px;
+        }
     }
 }
