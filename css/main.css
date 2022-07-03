@@ -331,7 +331,6 @@ label:has([type=radio]:checked) {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 7px;
-    padding: 16px 20px;
   }
 }
 .address-card__delivery-method {
